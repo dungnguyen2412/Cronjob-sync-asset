@@ -13,7 +13,7 @@ export class AssetCronService {
     private dataSource: DataSource,
   ) {}
 
-  @Cron(CronExpression.EVERY_10_SECONDS)
+  @Cron(CronExpression.EVERY_DAY_AT_MIDNIGHT)
   async handleCron() {
     this.logger.log('Cron fetching daily asset started!');
     try {
